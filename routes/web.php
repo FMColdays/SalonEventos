@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('login', [SistemaController::class, 'entrada'])->name(("login"));
-Route::post('@me', [SistemaController::class, 'procesar'])->name('sesion');
+Route::post('@me', [SistemaController::class, 'validar'])->name('sesion');

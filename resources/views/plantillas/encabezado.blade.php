@@ -15,11 +15,13 @@
         <div class="navbarC">
             <a><img class="logo" src="imagenes/logo.png"></a>
             <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Agenda</a></li>
-                <li><a href="">Eventos</a></li>
-                @if (Route::currentRouteName() != 'sesion')
-                    <li><a href="{{ route('login') }}"> Iniciar sesion</a></li>
+                @if (Route::currentRouteName() != 'login')
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Agenda</a></li>
+                    <li><a href="">Eventos</a></li>
+                    @if (Route::currentRouteName() != 'sesion')
+                        <li><a href="{{ route('login') }}"> Iniciar sesion</a></li>
+                    @endif
                 @endif
             </ul>
         </div>

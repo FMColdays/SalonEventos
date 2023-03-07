@@ -11,8 +11,8 @@ class SistemaController extends Controller
         return view('usuarios.login');
     }
 
-    public function procesar()
+    public function validar()
     {
-        return view('principal');
+        
     }
 }

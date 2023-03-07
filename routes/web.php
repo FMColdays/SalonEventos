@@ -18,5 +18,6 @@ Route::get('/', function () {
     return view('principal');
 });
 
-Route::get('login', [SistemaController::class, 'entrada'])->name(("login"));
+Route::get('login', [SistemaController::class, 'entrada'])->name(('login'));
 Route::post('@me', [SistemaController::class, 'validar'])->name('sesion');
+Route::get('evento', [SistemaController::class, 'verEventos'])->name('evento');

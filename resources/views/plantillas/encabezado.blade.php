@@ -14,13 +14,13 @@
     <nav class="navbar">
         <div class="navbarC">
             <a><img class="logo" src="imagenes/logo.png"></a>
-            <ul>
+            <ul class="opciones">
                 @if (Route::currentRouteName() != 'login')
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Agenda</a></li>
-                    <li><a href="">Eventos</a></li>
+                    <li><a href="{{ route('evento') }}">EVENTOS</a></li>
+                    <li><a href="">VIÑEDO</a></li>
+                    <li><a href="">RESTAURANTE</a></li>
                     @if (Route::currentRouteName() != 'sesion')
-                        <li><a href="{{ route('login') }}"> Iniciar sesion</a></li>
+                        <li><a href="{{ route('login') }}"> INICIAR SESIÓN</a></li>
                     @endif
                 @endif
             </ul>

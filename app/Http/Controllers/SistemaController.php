@@ -11,8 +11,19 @@ class SistemaController extends Controller
         return view('usuarios.login');
     }
 
-    public function validar()
+    public function validar(Request $solicitud)
     {
-        
+        $usuario = $solicitud->input('usuario');
+        $password = $solicitud->input('contraseña');
+        if ($usuario == $password) {
+            return view('principal');
+        } else {
+            echo "error";
+        }
+    }
+
+    public function verEventos()
+    {
+        return view('conjunto.eventos');
     }
 }
